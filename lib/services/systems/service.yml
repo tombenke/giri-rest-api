@@ -1,0 +1,101 @@
+name: System
+description:  |
+    Garden irrigator system entity
+style: COLLECTION
+uriTemplate: /systems
+methods:
+    GET:
+        summary: List all the System
+        notes: List all the System
+        # implementation: api.getSystem
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 200
+                reason: &OkReason Successful execution
+                # validationSchema: getCollection-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: getCollection-responseBody.json
+        testCases:
+            -
+                name: Get System
+                description: Successfully retrieves all the System
+                url: /systems
+                template: testGetMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    # validationSchema: getCollection-responseBody-validationSchema.json
+
+    POST:
+        summary: Create a new instance of System
+        notes: Create a new instance System
+        # implementation: api.postSystem
+        uriTemplate: /systems
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+            mockBody: postCollection-requestBody.json
+        responses:
+            -
+                name: OK
+                statusCode: *OkStatusCode
+                reason: *OkReason
+                # validationSchema: postCollection-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: postCollection-responseBody.json
+        testCases:
+            -
+                name: Create one instance of System
+                description: Succesfully creates a new instance of System
+                url: /systems
+                template: testPostMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                    body: postCollection-requestBody.json
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    body: postCollection-responseBody.json
+                    # validationSchema: postCollection-responseBody-validationSchema.json

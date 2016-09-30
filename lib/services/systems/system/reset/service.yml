@@ -1,0 +1,59 @@
+name: System Reset
+description: |
+    Reset the the whole system
+style: OPERATION
+uriTemplate: /systems/{systemId}/reset
+methods:
+    POST:
+        summary: The System Reset operation
+        notes: Execute the System Reset operation
+        uriTemplate: /reset
+        request:
+            parameters: 
+                -
+                    name: systemId
+                    kind: URL
+                    required: true
+                    type: string
+                    summary: The id of the System to be deleted
+                    default: 1
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+            mockBody: postOperation-requestBody.json
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 204
+                reason: &OkReason Successful execution
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: postOperation-responseBody.json
+        testCases:
+            -
+                name: The System Reset operation
+                description: Execute the System Reset operation
+                url: /systems/1/reset
+                template: testPostMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                    body: postOperation-requestBody.json
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    mockBody: postOperation-responseBody.json

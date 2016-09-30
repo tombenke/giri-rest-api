@@ -1,0 +1,35 @@
+{
+  "name": "giri-rest-api",
+  "description": "Specification of the giri garden irrigator REST API endpoints",
+  "version": "1.0.0",
+  "tags": [
+    "seneca",
+    "micro-services",
+    "giri",
+    "web"
+  ],
+  "author": {
+    "name": "Tamás Benke",
+    "email": "tombenke@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/tombenke/giri-rest-api/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tombenke/giri-rest-api/blob/master/LICENSE"
+  },
+  "homepage": "https://github.com/tombenke/giri-rest-api",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/tombenke/giri-rest-api.git"
+  },
+  "main": "lib/index",
+  "dependencies": {
+    "rest-tool-common": "*"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "make test"
+  }
+}

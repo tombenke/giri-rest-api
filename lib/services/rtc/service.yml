@@ -1,0 +1,98 @@
+name: RTC endpoint
+description: |
+    Manage the Real-Time Clock component of the system
+style: RESOURCE
+uriTemplate: /rtc
+methods:
+    GET:
+        summary: Get the actual time
+        notes: Get the actual time known by the RTC of the system
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 200
+                reason: &OkReason Successful execution
+                # validationSchema: getResource-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: getResource-responseBody.json
+        testCases:
+            -
+                name: Get RealTimeClock
+                description: Successfully retrieves the actual time
+                url: /rtc
+                template: testGetMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    # validationSchema: getResource-responseBody-validationSchema.json
+
+    PUT:
+        summary: Set the actual time
+        notes: Set the actual time in the system RTC
+        implementation: api.putRealTimeClock
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+        responses:
+            -
+                name: OK
+                statusCode: *OkStatusCode
+                reason: *OkReason
+                # validationSchema: putResource-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: putResource-responseBody.json
+        testCases:
+            -
+                name: Set the actual time
+                description: Succesfully sets the actual time of system RTC
+                url: /rtc
+                template: testPutMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                    body: putResource-requestBody.json
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    body: putResource-responseBody.json
+                    # validationSchema: putResource-responseBody-validationSchema.json

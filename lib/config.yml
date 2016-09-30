@@ -1,0 +1,11 @@
+services: 
+    - /monitoring/isAlive
+    - /rtc
+    - /systems
+    - /systems/system
+    - /systems/system/reset
+    - /clusters
+    - /clusters/cluster
+    - /clusters/cluster/sectors
+    - /sectors
+    - /sectors/sector

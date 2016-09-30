@@ -1,0 +1,108 @@
+name: ClusterSectors
+description:  |
+    The list of sectors belong to a specific cluster
+style: COLLECTION
+uriTemplate: /clusters/{clusterId}/sectors
+methods:
+    GET:
+        summary: List all the ClusterSectors
+        notes: List all the ClusterSectors
+        # implementation: api.getClusterSectors
+        request:
+            parameters: 
+                -
+                    name: clusterId
+                    kind: URL
+                    required: true
+                    type: string
+                    summary: The id of the Cluster to be deleted
+                    default: "1"
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 200
+                reason: &OkReason Successful execution
+                # validationSchema: getCollection-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: getCollection-responseBody.json
+        testCases:
+            -
+                name: Get ClusterSectors
+                description: Successfully retrieves all the ClusterSectors
+                url: /clusters/{clusterId}/sectors
+                template: testGetMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    # validationSchema: getCollection-responseBody-validationSchema.json
+
+#    POST:
+#        summary: Create a new instance of ClusterSectors
+#        notes: Create a new instance ClusterSectors
+#        # implementation: api.postClusterSectors
+#        uriTemplate: /clusters/{clusterId}/sectors
+#        request:
+#            parameters: []
+#            cookies: []
+#            headers:
+#                -
+#                    field: Accept
+#                    content: "application/json;q=0.9,*/*;q=0.8"
+#            mockBody: postCollection-requestBody.json
+#        responses:
+#            -
+#                name: OK
+#                statusCode: *OkStatusCode
+#                reason: *OkReason
+#                # validationSchema: postCollection-responseBody-validationSchema.json
+#                cookies: []
+#                headers:
+#                    -
+#                        field: Content-Type
+#                        content: application/json
+#                mockBody: postCollection-responseBody.json
+#        testCases:
+#            -
+#                name: Create one instance of ClusterSectors
+#                description: Succesfully creates a new instance of ClusterSectors
+#                url: /clusters/{clusterId}/sectors
+#                template: testPostMethod.mustache
+#                request:
+#                    cookies: []
+#                    headers:
+#                        -
+#                            field : "Accept"
+#                            content: "application/json;q=0.9,*/*;q=0.8"
+#                    body: postCollection-requestBody.json
+#                response:
+#                    name: OK
+#                    statusCode: *OkStatusCode
+#                    reason: *OkReason
+#                    cookies: []
+#                    headers:
+#                        -
+#                            field: "Content-Type"
+#                            content: "application/json"
+#                    body: postCollection-responseBody.json
+#                    # validationSchema: postCollection-responseBody-validationSchema.json
