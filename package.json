@@ -26,10 +26,10 @@
   },
   "main": "lib/index",
   "dependencies": {
-    "rest-tool-common": "*"
+    "rest-tool-common": "1.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "make test"
+    "test": "echo No tests defined!"
   }
 }
