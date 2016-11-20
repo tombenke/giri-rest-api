@@ -1,6 +1,6 @@
 {
-    error: {
-        code: 1234,
-        reason: "some reason for the malfunction...."
+    "error": {
+        "code": 1234,
+        "reason": "some reason for the malfunction...."
     }
 }
