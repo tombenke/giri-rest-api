@@ -3,6 +3,7 @@ services:
     - /rtc
     - /systems
     - /systems/system
+    - /systems/system/clusters
     - /systems/system/reset
     - /clusters
     - /clusters/cluster
