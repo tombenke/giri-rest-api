@@ -109,35 +109,35 @@ command.
    `giri-rest-api` will act as any other normal module. You can publish it to the npm store, or directly refer from its github repo.
    You only need to add it to the dependencies of your project, add load it via require(`giri-rest-api`) call.
 
-    "dependencies": {
-        // ...
-        "giri-rest-api": "1.0.0"
-    }
+        "dependencies": {
+            // ...
+            "giri-rest-api": "1.0.0"
+        }
 
-The sample code below demonstrates how to register the endpoint into a web server using seneca.
-You find the full code in the [giri-web](https://github.com/tombenke/giri-web) component:
+   The sample code below demonstrates how to register the endpoint into a web server using seneca.
+   You find the full code in the [giri-web](https://github.com/tombenke/giri-web) component:
 
-    const restApi = require('giri-rest-api')
-    const _ = require('underscore')
+        const restApi = require('giri-rest-api')
+        const _ = require('underscore')
 
-    var giriRoutes = []
-    _.map(restApi.services.getServices(), service => {
-        const uri = service.uriTemplate
-        const methods = service.methodList
-        _.map(methods, method => {
-            const route = {
-                method: method.methodName,
-                path: uri,
-                handler: function(request, reply) {
-                    console.log('requested: ', method.methodName, uri);
-                    seneca.act({ role: 'web', method: method.methodName, uri: uri, endpoint: service, request: request }, function(err, out) {
-                        return replyWrapper(reply, err, out)
-                    })
+        var giriRoutes = []
+        _.map(restApi.services.getServices(), service => {
+            const uri = service.uriTemplate
+            const methods = service.methodList
+            _.map(methods, method => {
+                const route = {
+                    method: method.methodName,
+                    path: uri,
+                    handler: function(request, reply) {
+                        console.log('requested: ', method.methodName, uri);
+                        seneca.act({ role: 'web', method: method.methodName, uri: uri, endpoint: service, request: request }, function(err, out) {
+                            return replyWrapper(reply, err, out)
+                        })
+                    }
                 }
-            }
-            giriRoutes.push(route)
+                giriRoutes.push(route)
+            })
         })
-    })
 
 ## todos
 
