@@ -4,54 +4,54 @@ description:  |
 style: COLLECTION
 uriTemplate: /sectors
 methods:
-#    Currently only the sector creation and update is required, so GET method will not be implemented.
-#    In order to retrieve the sectors use the GET /clusters/{clusterId}/sectors call.
-#    
-#    GET:
-#        summary: List all the Sectors
-#        notes: List all the Sectors
-#        # implementation: api.getSectors
-#        request:
-#            parameters: []
-#            cookies: []
-#            headers:
-#                -
-#                    field: Accept
-#                    content: "application/json;q=0.9,*/*;q=0.8"
-#        responses:
-#            -
-#                name: OK
-#                statusCode: &OkStatusCode 200
-#                reason: &OkReason Successful execution
-#                # validationSchema: getCollection-responseBody-validationSchema.json
-#                cookies: []
-#                headers:
-#                    -
-#                        field: Content-Type
-#                        content: application/json
-#                mockBody: getCollection-responseBody.json
-#        testCases:
-#            -
-#                name: Get Sectors
-#                description: Successfully retrieves all the Sectors
-#                url: /sectors
-#                template: testGetMethod.mustache
-#                request:
-#                    cookies: []
-#                    headers:
-#                        -
-#                            field : "Accept"
-#                            content: "application/json;q=0.9,*/*;q=0.8"
-#                response:
-#                    name: OK
-#                    statusCode: *OkStatusCode
-#                    reason: *OkReason
-#                    cookies: []
-#                    headers:
-#                        -
-#                            field: "Content-Type"
-#                            content: "application/json"
-#                    # validationSchema: getCollection-responseBody-validationSchema.json
+    Currently only the sector creation and update is required, so GET method will not be implemented.
+    In order to retrieve the sectors use the GET /clusters/{clusterId}/sectors call.
+    
+    GET:
+        summary: List all the Sectors
+        notes: List all the Sectors
+        # implementation: api.getSectors
+        request:
+            parameters: []
+            cookies: []
+            headers:
+                -
+                    field: Accept
+                    content: "application/json;q=0.9,*/*;q=0.8"
+        responses:
+            -
+                name: OK
+                statusCode: &OkStatusCode 200
+                reason: &OkReason Successful execution
+                # validationSchema: getCollection-responseBody-validationSchema.json
+                cookies: []
+                headers:
+                    -
+                        field: Content-Type
+                        content: application/json
+                mockBody: getCollection-responseBody.json
+        testCases:
+            -
+                name: Get Sectors
+                description: Successfully retrieves all the Sectors
+                url: /sectors
+                template: testGetMethod.mustache
+                request:
+                    cookies: []
+                    headers:
+                        -
+                            field : "Accept"
+                            content: "application/json;q=0.9,*/*;q=0.8"
+                response:
+                    name: OK
+                    statusCode: *OkStatusCode
+                    reason: *OkReason
+                    cookies: []
+                    headers:
+                        -
+                            field: "Content-Type"
+                            content: "application/json"
+                    # validationSchema: getCollection-responseBody-validationSchema.json
 
     POST:
         summary: Create a new instance of Sectors
