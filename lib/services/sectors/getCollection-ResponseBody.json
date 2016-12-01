@@ -1,6 +1,6 @@
 [{
+    "id": "9688588a-2507-4460-855c-72743ff7fe5f",
     "name": "tomatoes",
-    "sectorId": "9688588a-2507-4460-855c-72743ff7fe5f",
     "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
     "idx": 0,
     "config": {
@@ -14,8 +14,8 @@
         "portIdx": 0
     }
 }, {
+    "id": "aa0eb245-eb9e-4815-88f5-891bc89ca0d8",
     "name": "cucumbers",
-    "sectorId": "aa0eb245-eb9e-4815-88f5-891bc89ca0d8",
     "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
     "idx": 1,
     "config": {
@@ -29,8 +29,8 @@
         "portIdx": 1
     }
 }, {
+    "id": "74d9ac33-c3f2-4ba7-8d7e-89ede93ed191",
     "name": "papricas",
-    "sectorId": "74d9ac33-c3f2-4ba7-8d7e-89ede93ed191",
     "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
     "config": {
         "mode": "AUTO",
@@ -44,8 +44,8 @@
         "portIdx": 2
     }
 }, {
+    "id": "576ac398-f675-4851-b246-4bf6067471dd",
     "name": "carrots",
-    "sectorId": "576ac398-f675-4851-b246-4bf6067471dd",
     "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
     "idx": 3,
     "config": {
@@ -59,8 +59,8 @@
         "portIdx": 3
     }
 }, {
+    "id": "f63df5ca-f6b1-4c02-8f6a-f2170b8ed0a9",
     "name": "cucumbers",
-    "sectorId": "f63df5ca-f6b1-4c02-8f6a-f2170b8ed0a9",
     "clusterId": "d64d2325-c7b0-4bc7-9178-8ec76ac7355c",
     "idx": 0,
     "config": {
@@ -74,8 +74,8 @@
         "portIdx": 0
     }
 }, {
+    "id": "1d255036-419a-4955-8c44-889a0dbe368e",
     "name": "potatoes",
-    "sectorId": "1d255036-419a-4955-8c44-889a0dbe368e",
     "clusterId": "d64d2325-c7b0-4bc7-9178-8ec76ac7355c",
     "idx": 1,
     "config": {
