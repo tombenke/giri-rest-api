@@ -38,7 +38,7 @@ methods:
             -
                 name: Get Sector
                 description: Successfully retrieves one customer
-                url: /sectors/{sectorId}
+                url: /sectors/9688588a-2507-4460-855c-72743ff7fe5f
                 template: testGetMethod.mustache
                 request:
                     cookies: []
@@ -91,7 +91,7 @@ methods:
             -
                 name: Update Sector
                 description: Succesfully updates a Sector
-                url: /sectors/{sectorId}
+                url: /sectors/9688588a-2507-4460-855c-72743ff7fe5f
                 template: testPutMethod.mustache
                 request:
                     cookies: []
@@ -146,7 +146,7 @@ methods:
 #            -
 #                name: Delete Sector
 #                description: Successfully delete the Sector
-#                url: /sectors/{sectorId}
+#                url: /sectors/9688588a-2507-4460-855c-72743ff7fe5f
 #                template: testDelMethod.mustache
 #                request:
 #                    cookies: []

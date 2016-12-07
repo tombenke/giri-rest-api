@@ -38,7 +38,7 @@ methods:
             -
                 name: Get ClusterSectors
                 description: Successfully retrieves all the ClusterSectors
-                url: /clusters/{clusterId}/sectors
+                url: /clusters/79e914da-5103-4651-abb1-70214d2270a7/sectors
                 template: testGetMethod.mustache
                 request:
                     cookies: []
@@ -86,7 +86,7 @@ methods:
 #            -
 #                name: Create one instance of ClusterSectors
 #                description: Succesfully creates a new instance of ClusterSectors
-#                url: /clusters/{clusterId}/sectors
+#                url: /clusters/79e914da-5103-4651-abb1-70214d2270a7/sectors
 #                template: testPostMethod.mustache
 #                request:
 #                    cookies: []

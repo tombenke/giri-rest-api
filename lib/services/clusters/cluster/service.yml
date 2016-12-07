@@ -38,7 +38,7 @@ methods:
             -
                 name: Get Cluster
                 description: Successfully retrieves one customer
-                url: /clusters/{clusterId}
+                url: /clusters/79e914da-5103-4651-abb1-70214d2270a7
                 template: testGetMethod.mustache
                 request:
                     cookies: []
@@ -91,7 +91,7 @@ methods:
             -
                 name: Update Cluster
                 description: Succesfully updates a Cluster
-                url: /clusters/{clusterId}
+                url: /clusters/79e914da-5103-4651-abb1-70214d2270a7
                 template: testPutMethod.mustache
                 request:
                     cookies: []
@@ -146,7 +146,7 @@ methods:
 #            -
 #                name: Delete Cluster
 #                description: Successfully delete the Cluster
-#                url: /clusters/{clusterId}
+#                url: /clusters/79e914da-5103-4651-abb1-70214d2270a7
 #                template: testDelMethod.mustache
 #                request:
 #                    cookies: []

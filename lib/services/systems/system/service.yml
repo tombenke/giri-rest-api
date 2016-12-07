@@ -38,7 +38,7 @@ methods:
             -
                 name: Get System
                 description: Successfully retrieves one customer
-                url: /systems/1
+                url: /systems/2a1152ee-4d77-4ff4-a811-598555937625
                 template: testGetMethod.mustache
                 request:
                     cookies: []
@@ -91,7 +91,7 @@ methods:
             -
                 name: Update System
                 description: Succesfully updates a System
-                url: /systems/1
+                url: /systems/2a1152ee-4d77-4ff4-a811-598555937625
                 template: testPutMethod.mustache
                 request:
                     cookies: []
@@ -146,7 +146,7 @@ methods:
 #            -
 #                name: Delete System
 #                description: Successfully delete the System
-#                url: /systems/1
+#                url: /systems/2a1152ee-4d77-4ff4-a811-598555937625
 #                template: testDelMethod.mustache
 #                request:
 #                    cookies: []

@@ -38,7 +38,7 @@ methods:
             -
                 name: The System Reset operation
                 description: Execute the System Reset operation
-                url: /systems/1/reset
+                url: /systems/2a1152ee-4d77-4ff4-a811-598555937625/reset
                 template: testPostMethod.mustache
                 request:
                     cookies: []
