@@ -1,0 +1,17 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The POST /clusters request body
+description: The details of the cluster to be created
+example:
+  $ref: ./post-clusters-request.yml
+type: object
+properties: 
+  systemId: 
+    type: string
+    description: The unique ID of the system the newly created cluster will be added
+  name: 
+    type: string
+    description: The display name of the new cluster
+required: 
+  - systemId
+  - name
+

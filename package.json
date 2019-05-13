@@ -3,7 +3,8 @@
   "description": "Specification of the giri garden irrigator REST API endpoints",
   "version": "1.0.1",
   "tags": [
-    "seneca",
+    "REST",
+    "swagger",
     "micro-services",
     "giri",
     "web"
@@ -24,12 +25,23 @@
     "type": "git",
     "url": "http://github.com/tombenke/giri-rest-api.git"
   },
-  "main": "lib/index",
-  "dependencies": {
-    "rest-tool-common": "1.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^2.1.0",
+    "prettier": "^1.17.0",
+    "swagger-cli": "^2.2.1"
   },
-  "devDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier && npm run swagger"
+    }
+  },
   "scripts": {
-    "test": "echo No tests defined!"
+    "test": "echo No tests defined!",
+    "clean": "rm dist/* -fr",
+    "prepublishOnly": "npm run swagger && npm run prettier",
+    "prettier": "prettier --single-quote --write 'rest-api/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "swagger": "swagger-cli validate rest-api/api.yml && swagger-cli bundle rest-api/api.yml -o rest-api/swagger.json",
+    "all": "npm run swagger && npm run prettier"
   }
 }

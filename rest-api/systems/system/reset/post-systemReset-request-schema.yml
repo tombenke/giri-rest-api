@@ -1,0 +1,6 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The POST /systems/{systemId}/reset request body
+description: System reset request
+example: {}
+type: object
+

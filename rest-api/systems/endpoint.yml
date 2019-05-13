@@ -1,0 +1,48 @@
+#/systems: 
+get: 
+  tags: 
+    - systems
+  summary: List all the Systems
+  description: List all the Systems
+
+  operationId: systems.get
+  produces: 
+    - application/json
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./get-systems-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./get-systems-response.yml
+  deprecated: false
+post: 
+  tags: 
+    - systems
+  summary: Create a new instance of System
+  description: Create a new instance of System
+
+  operationId: systems.post
+  produces: 
+    - application/json
+  parameters: 
+    - in: body
+      name: systems
+      description: The system object to create
+      required: true
+      schema:
+        $ref: ./post-systems-request-schema.yml
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./post-systems-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./system/system.yml
+    "400": 
+      description: Missing or invalid parameters
+      schema: 
+        $ref: ../400-response-schema.yml
+  deprecated: false

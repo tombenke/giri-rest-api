@@ -1,0 +1,49 @@
+#/clusters: 
+get: 
+  tags: 
+    - clusters
+  summary: List all the Clusters
+  description: List all the Clusters
+
+  operationId: clusters.get
+  produces: 
+    - application/json
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./get-clusters-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./get-clusters-response.yml
+  deprecated: false
+      
+post: 
+  tags: 
+    - clusters
+  summary: Create a new instance of Clusters
+  description: Create a new instance of Clusters
+
+  operationId: clusters.post
+  produces: 
+    - application/json
+  parameters: 
+    - in: body
+      name: clusters
+      description: The cluster object to create
+      required: true
+      schema:
+        $ref: ./post-clusters-request-schema.yml
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./post-clusters-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./post-clusters-response.yml
+    "400": 
+      description: Missing or invalid parameters
+      schema: 
+        $ref: ../400-response-schema.yml
+  deprecated: false

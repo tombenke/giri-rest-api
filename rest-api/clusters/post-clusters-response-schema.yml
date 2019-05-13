@@ -1,0 +1,19 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The POST /clusters response body
+description: The response object of the cluster creation operation
+type: object
+properties: 
+  id: 
+    type: string
+    description: The unique ID of the newly created cluster, assigned by the giri system.
+  systemId: 
+    type: string
+    description: The unique ID of the system the new cluster belongs to
+  name: 
+    type: string
+    description: The display name of the cluster
+required: 
+  - id
+  - systemId
+  - name
+

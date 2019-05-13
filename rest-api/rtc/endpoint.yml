@@ -1,0 +1,48 @@
+#/rtc: 
+get: 
+  tags: 
+    - rtc
+  summary: Get the actual time
+  description: Get the actual time known by the RTC of the system
+
+  operationId: rtc.get
+  produces: 
+    - application/json
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./rtc-schema.yml
+      examples:
+        application/json:
+          $ref: ./rtc.yml
+  deprecated: false
+put: 
+  tags: 
+    - rtc
+  summary: Set the actual time
+  description:  Set the actual time in the system RTC
+
+  operationId: rtc.put
+  produces: 
+    - application/json
+  parameters: 
+    - in: body
+      name: rtc
+      description: The put rtc parameters
+      required: true
+      schema:
+        $ref: ./rtc-request-schema.yml
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./rtc-schema.yml
+      examples:
+        application/json:
+          $ref: ./rtc.yml
+    "400": 
+      description: Missing or invalid parameters
+      schema: 
+        $ref: ../400-response-schema.yml
+  deprecated: false

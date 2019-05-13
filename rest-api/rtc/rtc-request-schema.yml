@@ -1,0 +1,13 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: rtc body
+description: The actual time to set
+example:
+  time: 1474983731
+type: object
+properties: 
+  time: 
+    type: number
+    description: The time-stamp value to set
+required: 
+  - time
+

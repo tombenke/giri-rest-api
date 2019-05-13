@@ -1,0 +1,62 @@
+#/clusters/{clusterId}: 
+get: 
+  tags: 
+    - clusters
+  summary: Get one Cluster
+  description: Get one Cluster
+
+  operationId: cluster.get
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: clusterId
+      description: The unique ID of the cluster to retrieve
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./get-cluster-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./get-cluster-response.yml
+  deprecated: false
+
+put: 
+  tags: 
+    - clusters
+  summary: Update a Cluster
+  description: Update a Cluster
+
+  operationId: cluster.put
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: clusterId
+      description: The unique ID of the cluster to update
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+    - in: body
+      name: cluster
+      description: The cluster object to update
+      required: true
+      schema:
+        $ref: ./put-cluster-request-schema.yml
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./put-cluster-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./put-cluster-response.yml
+    "400": 
+      description: Missing or invalid parameters
+      schema: 
+        $ref: ../../400-response-schema.yml
+  deprecated: false

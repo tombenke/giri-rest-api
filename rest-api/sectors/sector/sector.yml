@@ -1,0 +1,12 @@
+name: tomatoes
+clusterId: "79e914da-5103-4651-abb1-70214d2270a7"
+idx: 0
+config: 
+  mode: AUTO
+  startAt: "0 5 * * *"
+  duration: 60
+state: OFF
+port: 
+  deviceId: "53181aca-1dad-4cc0-86b6-eaf59dd01989"
+  portIdx: 0
+

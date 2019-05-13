@@ -1,0 +1,19 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The PUT /clusters/{clusterId} response body
+description: The updated cluster descriptor object
+type: object
+properties: 
+  id: 
+    type: string
+    description: The unique ID of the cluster
+  systemId: 
+    type: string
+    description: The unique system ID of the system the cluster belongs to
+  name: 
+    type: string
+    description: The display name of the cluster
+required: 
+  - id
+  - systemId
+  - name
+

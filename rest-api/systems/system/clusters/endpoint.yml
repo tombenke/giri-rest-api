@@ -1,0 +1,26 @@
+#/systems/{systemId}/clusters: 
+get: 
+  tags: 
+    - systems
+  summary: List all the Clusters that belongs to a specific system
+  description: List all the Clusters
+
+  operationId: system.getClusters
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: systemId
+      description: The unique ID of the system that contains the clusters 
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./get-systemClusters-response-schema.yml
+      examples:
+        application/json:
+          $ref: ./get-systemClusters-response.yml
+  deprecated: false

@@ -1,0 +1,11 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: rtc body
+description: The time set
+type: object
+properties: 
+  time: 
+    type: number
+    description: The actual time-stamp value
+required: 
+  - time
+

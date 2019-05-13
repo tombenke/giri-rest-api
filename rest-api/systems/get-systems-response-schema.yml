@@ -1,0 +1,18 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The GET /systems response body
+description: The list of systems
+type: array
+items: 
+  type: object
+  description: A system descriptor
+  properties: 
+    id: 
+      type: string
+      description: The unique ID of the system
+    name: 
+      type: string
+      description: The display name of the system
+  required: 
+    - id
+    - name
+

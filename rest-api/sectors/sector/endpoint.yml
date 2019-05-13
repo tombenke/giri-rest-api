@@ -1,0 +1,62 @@
+#/sectors/{sectorId}: 
+get: 
+  tags: 
+    - sectors
+  summary: One sector of a specific cluster of a specific system
+  description: Get one Sector
+
+  operationId: sector.get
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: sectorId
+      description: The unique ID of the sector to retrieve
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./sector-schema.yml
+      examples:
+        application/json:
+          $ref: ./sector.yml
+  deprecated: false
+
+put:
+  tags: 
+    - sectors
+  summary: Update a Sector
+  description: Update a Sector
+
+  operationId: sector.put
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: sectorId
+      description: The unique ID of the sector to update
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+    - in: body
+      name: sectors
+      description: The sector object to update
+      required: true
+      schema:
+        $ref: ./sector-request-schema.yml
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./sector-schema.yml
+      examples:
+        application/json:
+          $ref: ./sector.yml
+    "400": 
+      description: Missing or invalid parameters
+      schema: 
+        $ref: ../../400-response-schema.yml
+  deprecated: false

@@ -1,0 +1,76 @@
+swagger: "2.0"
+
+info: 
+  title: giri-rest-api
+  description: This is the specification of the giri garden irrigator REST API endpoints.
+  version: "1.0"
+  contact: 
+    name: giri-rest-api
+    url: "http://localhost"
+    email: "tombenke@gmail.com"
+
+schemes:
+  - http
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+host: localhost
+basePath: /
+
+tags: 
+       
+  - name: systems
+    description: Manage the garden irrigatior systems
+
+  - name: clusters
+    description: Manage the sector-clusters of the garden irrigator system
+
+  - name: sectors
+    description: Manage the sectors of the garden irrigator system
+
+  - name: rtc
+    description: Manage the Real-Time Clock component of the system
+
+  - name: swagger
+    description: Static JSON format swagger file. Contains the specification of all endpoints provided by the giri system.
+
+securityDefinitions: 
+  ClientToken: 
+    description: The frontend uses ApiKey to access to these endpoints
+    type: apiKey
+    name: token
+    in: query
+
+security: 
+  - ClientToken: []
+
+paths:
+  # `giri-api` endpoints
+  /rtc:
+    $ref: ./rtc/endpoint.yml
+  /systems:
+    $ref: ./systems/endpoint.yml
+  /systems/{systemId}:
+    $ref: ./systems/system/endpoint.yml
+  /systems/{systemId}/clusters:
+    $ref: ./systems/system/clusters/endpoint.yml
+  /systems/{systemId}/reset:
+    $ref: ./systems/system/reset/endpoint.yml
+  /clusters:
+    $ref: ./clusters/endpoint.yml
+  /clusters/{clusterId}:
+    $ref: ./clusters/cluster/endpoint.yml
+  /clusters/{clusterId}/sectors:
+    $ref: ./clusters/cluster/sectors/endpoint.yml
+  /sectors:
+    $ref: ./sectors/endpoint.yml
+  /sectors/{sectorId}:
+    $ref: ./sectors/sector/endpoint.yml
+
+# Static content service for swagger.json
+  /api-docs/:
+    $ref: ./api-docs/endpoint.yml
+

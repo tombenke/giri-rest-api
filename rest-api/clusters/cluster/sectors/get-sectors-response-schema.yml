@@ -1,0 +1,6 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The GET /sectors response body
+description: The list of sectors belong to a specific cluster
+type: array
+items:
+  $ref: ../../../sectors/sector/sector-schema.yml

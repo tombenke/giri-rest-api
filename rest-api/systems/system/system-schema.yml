@@ -1,0 +1,15 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The system body
+description: The descriptor of the selected system
+type: object
+properties: 
+  id: 
+    type: string
+    description: The unique ID of the system
+  name: 
+    type: string
+    description: The display name of the system
+required: 
+  - id
+  - name
+

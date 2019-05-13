@@ -1,0 +1,13 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: Response schema for Error 400
+description: The content of the error response in case of wrong or missing parameters
+example:
+  $ref: ./400-response.yml
+type: object
+properties: 
+  error: 
+    type: string
+    description: The details about the error
+required: 
+  - error
+

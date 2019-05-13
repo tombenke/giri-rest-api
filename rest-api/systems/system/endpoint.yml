@@ -1,0 +1,62 @@
+#/systems/{systemId}: 
+get: 
+  tags: 
+    - systems
+  summary: Get one System
+  description: Get one System
+
+  operationId: system.get
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: systemId
+      description: The unique ID of the system to retrieve
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./system-schema.yml
+      examples:
+        application/json:
+          $ref: ./system.yml
+  deprecated: false
+
+put: 
+  tags: 
+    - systems
+  summary: Update a System
+  description: Update a System
+
+  operationId: system.put
+  produces: 
+    - application/json
+  parameters: 
+    - in: path
+      name: systemId
+      description: The unique ID of the system to update
+      type: string
+      required: true
+      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+    - in: body
+      name: system
+      description: The system parameters
+      required: true
+      schema:
+        $ref: ./system-request-schema.yml
+  responses: 
+    "200": 
+      description: OK
+      schema: 
+        $ref: ./system-schema.yml
+      examples:
+        application/json:
+          $ref: ./system.yml
+    "400": 
+      description: Missing or invalid parameters
+      schema: 
+        $ref: ../../400-response-schema.yml
+  deprecated: false

@@ -1,0 +1,22 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The GET /clusters response body
+description: The list of all clusters
+type: array
+items: 
+  type: object
+  description: One cluster descriptor
+  properties: 
+    id: 
+      type: string
+      description: The unique ID of the cluster
+    systemId: 
+      type: string
+      description: The unique ID of the system the cluster belongs to
+    name: 
+      type: string
+      description: The display name of the cluster
+  required: 
+    - id
+    - systemId
+    - name
+

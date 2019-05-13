@@ -1,0 +1,5 @@
+title: get-sectors-response.json schema Set
+description: The list of all sectors of the system
+type: array
+items: 
+  $ref: ./sector/sector-schema.yml

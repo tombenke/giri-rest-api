@@ -1,0 +1,21 @@
+#$schema: "http://json-schema.org/draft-04/schema#"
+title: The PUT /clusters/{clusterId} request body
+description: The cluster descriptor object to update
+example:
+  $ref: ./put-cluster-request.yml
+type: object
+properties: 
+  id: 
+    type: string
+    description: The unique ID of the cluster
+  systemId: 
+    type: string
+    description: The unique ID of the system this cluster belongs to
+  name: 
+    type: string
+    description: The display name of the cluster
+required: 
+  - id
+  - systemId
+  - name
+
