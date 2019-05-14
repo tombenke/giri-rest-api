@@ -10,9 +10,15 @@
       "email": "tombenke@gmail.com"
     }
   },
-  "schemes": ["http"],
-  "consumes": ["application/json"],
-  "produces": ["application/json"],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
   "host": "localhost",
   "basePath": "/",
   "tags": [
@@ -53,11 +59,15 @@
   "paths": {
     "/rtc": {
       "get": {
-        "tags": ["rtc"],
+        "tags": [
+          "rtc"
+        ],
         "summary": "Get the actual time",
         "description": "Get the actual time known by the RTC of the system",
         "operationId": "rtc.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -74,11 +84,15 @@
         "deprecated": false
       },
       "put": {
-        "tags": ["rtc"],
+        "tags": [
+          "rtc"
+        ],
         "summary": "Set the actual time",
         "description": "Set the actual time in the system RTC",
         "operationId": "rtc.put",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "body",
@@ -98,7 +112,9 @@
                   "description": "The time-stamp value to set"
                 }
               },
-              "required": ["time"]
+              "required": [
+                "time"
+              ]
             }
           }
         ],
@@ -115,7 +131,9 @@
                   "description": "The actual time-stamp value"
                 }
               },
-              "required": ["time"]
+              "required": [
+                "time"
+              ]
             },
             "examples": {
               "application/json": {
@@ -138,7 +156,9 @@
                   "description": "The details about the error"
                 }
               },
-              "required": ["error"]
+              "required": [
+                "error"
+              ]
             }
           }
         },
@@ -147,11 +167,15 @@
     },
     "/systems": {
       "get": {
-        "tags": ["systems"],
+        "tags": [
+          "systems"
+        ],
         "summary": "List all the Systems",
         "description": "List all the Systems",
         "operationId": "systems.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -172,7 +196,10 @@
                     "description": "The display name of the system"
                   }
                 },
-                "required": ["id", "name"]
+                "required": [
+                  "id",
+                  "name"
+                ]
               }
             },
             "examples": {
@@ -188,11 +215,15 @@
         "deprecated": false
       },
       "post": {
-        "tags": ["systems"],
+        "tags": [
+          "systems"
+        ],
         "summary": "Create a new instance of System",
         "description": "Create a new instance of System",
         "operationId": "systems.post",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "body",
@@ -212,7 +243,9 @@
                   "description": "The display name of the system"
                 }
               },
-              "required": ["name"]
+              "required": [
+                "name"
+              ]
             }
           }
         ],
@@ -233,7 +266,10 @@
                   "description": "The display name of the system."
                 }
               },
-              "required": ["id", "name"]
+              "required": [
+                "id",
+                "name"
+              ]
             },
             "examples": {
               "application/json": {
@@ -254,11 +290,15 @@
     },
     "/systems/{systemId}": {
       "get": {
-        "tags": ["systems"],
+        "tags": [
+          "systems"
+        ],
         "summary": "Get one System",
         "description": "Get one System",
         "operationId": "system.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -286,7 +326,10 @@
                   "description": "The display name of the system"
                 }
               },
-              "required": ["id", "name"]
+              "required": [
+                "id",
+                "name"
+              ]
             },
             "examples": {
               "application/json": {
@@ -298,11 +341,15 @@
         "deprecated": false
       },
       "put": {
-        "tags": ["systems"],
+        "tags": [
+          "systems"
+        ],
         "summary": "Update a System",
         "description": "Update a System",
         "operationId": "system.put",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -335,7 +382,10 @@
                   "description": "The display name of the system"
                 }
               },
-              "required": ["id", "name"]
+              "required": [
+                "id",
+                "name"
+              ]
             }
           }
         ],
@@ -363,11 +413,15 @@
     },
     "/systems/{systemId}/clusters": {
       "get": {
-        "tags": ["systems"],
+        "tags": [
+          "systems"
+        ],
         "summary": "List all the Clusters that belongs to a specific system",
         "description": "List all the Clusters",
         "operationId": "system.getClusters",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -402,7 +456,11 @@
                     "description": "The display name of the cluster"
                   }
                 },
-                "required": ["clusterId", "systemId", "name"]
+                "required": [
+                  "clusterId",
+                  "systemId",
+                  "name"
+                ]
               }
             },
             "examples": {
@@ -426,11 +484,15 @@
     },
     "/systems/{systemId}/reset": {
       "post": {
-        "tags": ["systems"],
+        "tags": [
+          "systems"
+        ],
         "summary": "The System Reset operation",
         "description": "Execute the System Reset operation",
         "operationId": "system.reset",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -471,11 +533,15 @@
     },
     "/clusters": {
       "get": {
-        "tags": ["clusters"],
+        "tags": [
+          "clusters"
+        ],
         "summary": "List all the Clusters",
         "description": "List all the Clusters",
         "operationId": "clusters.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -500,7 +566,11 @@
                     "description": "The display name of the cluster"
                   }
                 },
-                "required": ["id", "systemId", "name"]
+                "required": [
+                  "id",
+                  "systemId",
+                  "name"
+                ]
               }
             },
             "examples": {
@@ -522,11 +592,15 @@
         "deprecated": false
       },
       "post": {
-        "tags": ["clusters"],
+        "tags": [
+          "clusters"
+        ],
         "summary": "Create a new instance of Clusters",
         "description": "Create a new instance of Clusters",
         "operationId": "clusters.post",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "body",
@@ -551,7 +625,10 @@
                   "description": "The display name of the new cluster"
                 }
               },
-              "required": ["systemId", "name"]
+              "required": [
+                "systemId",
+                "name"
+              ]
             }
           }
         ],
@@ -576,7 +653,11 @@
                   "description": "The display name of the cluster"
                 }
               },
-              "required": ["id", "systemId", "name"]
+              "required": [
+                "id",
+                "systemId",
+                "name"
+              ]
             },
             "examples": {
               "application/json": {
@@ -598,11 +679,15 @@
     },
     "/clusters/{clusterId}": {
       "get": {
-        "tags": ["clusters"],
+        "tags": [
+          "clusters"
+        ],
         "summary": "Get one Cluster",
         "description": "Get one Cluster",
         "operationId": "cluster.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -634,7 +719,11 @@
                   "description": "The display name of the cluster"
                 }
               },
-              "required": ["id", "systemId", "name"]
+              "required": [
+                "id",
+                "systemId",
+                "name"
+              ]
             },
             "examples": {
               "application/json": {
@@ -648,11 +737,15 @@
         "deprecated": false
       },
       "put": {
-        "tags": ["clusters"],
+        "tags": [
+          "clusters"
+        ],
         "summary": "Update a Cluster",
         "description": "Update a Cluster",
         "operationId": "cluster.put",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -690,7 +783,11 @@
                   "description": "The display name of the cluster"
                 }
               },
-              "required": ["id", "systemId", "name"]
+              "required": [
+                "id",
+                "systemId",
+                "name"
+              ]
             }
           }
         ],
@@ -715,7 +812,11 @@
                   "description": "The display name of the cluster"
                 }
               },
-              "required": ["id", "systemId", "name"]
+              "required": [
+                "id",
+                "systemId",
+                "name"
+              ]
             },
             "examples": {
               "application/json": {
@@ -737,11 +838,15 @@
     },
     "/clusters/{clusterId}/sectors": {
       "get": {
-        "tags": ["clusters"],
+        "tags": [
+          "clusters"
+        ],
         "summary": "The list of sectors belong to a specific cluster",
         "description": "List all the sectors of the cluster",
         "operationId": "cluster.getSectors",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -838,11 +943,15 @@
     },
     "/sectors": {
       "get": {
-        "tags": ["sectors"],
+        "tags": [
+          "sectors"
+        ],
         "summary": "Get the list of all sectors of all systems",
         "description": "Returns with the list of all sectors of all systems. \nIn order to retrieve the sectors of a specific cluster use the GET /clusters/{clusterId}/sectors call.\n",
         "operationId": "sectors.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -959,11 +1068,15 @@
         "deprecated": false
       },
       "post": {
-        "tags": ["sectors"],
+        "tags": [
+          "sectors"
+        ],
         "summary": "Create a new instance of Sectors",
         "description": "Create a new instance of Sectors",
         "operationId": "sectors.post",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "body",
@@ -1023,7 +1136,11 @@
                       "description": "The length of period in minutes, if `mode` is `AUTO`"
                     }
                   },
-                  "required": ["mode", "startAt", "duration"]
+                  "required": [
+                    "mode",
+                    "startAt",
+                    "duration"
+                  ]
                 },
                 "state": {
                   "type": "string",
@@ -1042,7 +1159,10 @@
                       "description": "The index of the port on the physical device"
                     }
                   },
-                  "required": ["deviceId", "portIdx"]
+                  "required": [
+                    "deviceId",
+                    "portIdx"
+                  ]
                 }
               },
               "required": [
@@ -1098,7 +1218,11 @@
                       "description": "The length of period in minutes, if `mode` is `AUTO`"
                     }
                   },
-                  "required": ["mode", "startAt", "duration"]
+                  "required": [
+                    "mode",
+                    "startAt",
+                    "duration"
+                  ]
                 },
                 "state": {
                   "type": "string",
@@ -1117,7 +1241,10 @@
                       "description": "The index of the port on the physical device"
                     }
                   },
-                  "required": ["deviceId", "portIdx"]
+                  "required": [
+                    "deviceId",
+                    "portIdx"
+                  ]
                 }
               },
               "required": [
@@ -1160,11 +1287,15 @@
     },
     "/sectors/{sectorId}": {
       "get": {
-        "tags": ["sectors"],
+        "tags": [
+          "sectors"
+        ],
         "summary": "One sector of a specific cluster of a specific system",
         "description": "Get one Sector",
         "operationId": "sector.get",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -1191,11 +1322,15 @@
         "deprecated": false
       },
       "put": {
-        "tags": ["sectors"],
+        "tags": [
+          "sectors"
+        ],
         "summary": "Update a Sector",
         "description": "Update a Sector",
         "operationId": "sector.put",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -1239,7 +1374,9 @@
     },
     "/api-docs/": {
       "get": {
-        "tags": ["swagger"],
+        "tags": [
+          "swagger"
+        ],
         "summary": "Responses the files from the directory defined by the contentPath property",
         "x-static": {
           "contentPath": "./",
@@ -1248,7 +1385,9 @@
             "index": true
           }
         },
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
