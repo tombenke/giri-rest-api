@@ -1,7 +1,7 @@
 {
   "name": "giri-rest-api",
   "description": "Specification of the giri garden irrigator REST API endpoints",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "tags": [
     "REST",
     "swagger",
