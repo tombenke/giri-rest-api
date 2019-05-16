@@ -5,7 +5,6 @@ post:
   summary: The System Reset operation
   description: Execute the System Reset operation
 
-  operationId: system.reset
   produces: 
     - application/json
   parameters: 

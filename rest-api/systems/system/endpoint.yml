@@ -5,7 +5,6 @@ get:
   summary: Get one System
   description: Get one System
 
-  operationId: system.get
   produces: 
     - application/json
   parameters: 

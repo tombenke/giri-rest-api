@@ -5,7 +5,6 @@ get:
   summary: Get one Cluster
   description: Get one Cluster
 
-  operationId: cluster.get
   produces: 
     - application/json
   parameters: 

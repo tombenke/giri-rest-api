@@ -5,7 +5,6 @@ get:
   summary: Get the actual time
   description: Get the actual time known by the RTC of the system
 
-  operationId: rtc.get
   produces: 
     - application/json
   responses: 
@@ -23,7 +22,6 @@ put:
   summary: Set the actual time
   description:  Set the actual time in the system RTC
 
-  operationId: rtc.put
   produces: 
     - application/json
   parameters: 

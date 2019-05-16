@@ -4,8 +4,6 @@ get:
     - systems
   summary: List all the Systems
   description: List all the Systems
-
-  operationId: systems.get
   produces: 
     - application/json
   responses: 
@@ -22,8 +20,6 @@ post:
     - systems
   summary: Create a new instance of System
   description: Create a new instance of System
-
-  operationId: systems.post
   produces: 
     - application/json
   parameters: 
@@ -46,3 +42,15 @@ post:
       schema: 
         $ref: ../400-response-schema.yml
   deprecated: false
+delete: 
+  tags: 
+    - systems
+  summary: Deletes all the Systems
+  description: Deletes all the Systems
+  produces: 
+    - application/json
+  responses: 
+    "204": 
+      description: No Content
+  deprecated: false
+

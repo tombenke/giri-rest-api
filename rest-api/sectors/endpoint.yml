@@ -7,7 +7,6 @@ get:
       Returns with the list of all sectors of all systems. 
       In order to retrieve the sectors of a specific cluster use the GET /clusters/{clusterId}/sectors call.
 
-  operationId: sectors.get
   produces: 
     - application/json
   responses: 

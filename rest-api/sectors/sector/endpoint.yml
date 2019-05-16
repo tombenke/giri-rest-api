@@ -5,7 +5,6 @@ get:
   summary: One sector of a specific cluster of a specific system
   description: Get one Sector
 
-  operationId: sector.get
   produces: 
     - application/json
   parameters: 

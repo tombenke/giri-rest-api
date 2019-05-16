@@ -4,7 +4,6 @@ get:
     - "clusters"
   summary: The list of sectors belong to a specific cluster
   description: List all the sectors of the cluster
-  operationId: cluster.getSectors
   produces: 
     - application/json
   parameters: 

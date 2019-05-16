@@ -5,7 +5,6 @@ get:
   summary: List all the Clusters
   description: List all the Clusters
 
-  operationId: clusters.get
   produces: 
     - application/json
   responses: 

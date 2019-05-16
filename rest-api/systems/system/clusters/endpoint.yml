@@ -5,7 +5,6 @@ get:
   summary: List all the Clusters that belongs to a specific system
   description: List all the Clusters
 
-  operationId: system.getClusters
   produces: 
     - application/json
   parameters: 

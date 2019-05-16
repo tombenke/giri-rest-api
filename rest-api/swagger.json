@@ -64,7 +64,6 @@
         ],
         "summary": "Get the actual time",
         "description": "Get the actual time known by the RTC of the system",
-        "operationId": "rtc.get",
         "produces": [
           "application/json"
         ],
@@ -89,7 +88,6 @@
         ],
         "summary": "Set the actual time",
         "description": "Set the actual time in the system RTC",
-        "operationId": "rtc.put",
         "produces": [
           "application/json"
         ],
@@ -172,7 +170,6 @@
         ],
         "summary": "List all the Systems",
         "description": "List all the Systems",
-        "operationId": "systems.get",
         "produces": [
           "application/json"
         ],
@@ -207,6 +204,10 @@
                 {
                   "id": "2a1152ee-4d77-4ff4-a811-598555937625",
                   "name": "hedgehog-garden"
+                },
+                {
+                  "id": "2adce0f1-397f-4923-bdf2-16334a76c29f",
+                  "name": "backyard"
                 }
               ]
             }
@@ -220,7 +221,6 @@
         ],
         "summary": "Create a new instance of System",
         "description": "Create a new instance of System",
-        "operationId": "systems.post",
         "produces": [
           "application/json"
         ],
@@ -286,6 +286,22 @@
           }
         },
         "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "systems"
+        ],
+        "summary": "Deletes all the Systems",
+        "description": "Deletes all the Systems",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "deprecated": false
       }
     },
     "/systems/{systemId}": {
@@ -295,7 +311,6 @@
         ],
         "summary": "Get one System",
         "description": "Get one System",
-        "operationId": "system.get",
         "produces": [
           "application/json"
         ],
@@ -418,7 +433,6 @@
         ],
         "summary": "List all the Clusters that belongs to a specific system",
         "description": "List all the Clusters",
-        "operationId": "system.getClusters",
         "produces": [
           "application/json"
         ],
@@ -489,7 +503,6 @@
         ],
         "summary": "The System Reset operation",
         "description": "Execute the System Reset operation",
-        "operationId": "system.reset",
         "produces": [
           "application/json"
         ],
@@ -538,7 +551,6 @@
         ],
         "summary": "List all the Clusters",
         "description": "List all the Clusters",
-        "operationId": "clusters.get",
         "produces": [
           "application/json"
         ],
@@ -684,7 +696,6 @@
         ],
         "summary": "Get one Cluster",
         "description": "Get one Cluster",
-        "operationId": "cluster.get",
         "produces": [
           "application/json"
         ],
@@ -843,7 +854,6 @@
         ],
         "summary": "The list of sectors belong to a specific cluster",
         "description": "List all the sectors of the cluster",
-        "operationId": "cluster.getSectors",
         "produces": [
           "application/json"
         ],
@@ -948,7 +958,6 @@
         ],
         "summary": "Get the list of all sectors of all systems",
         "description": "Returns with the list of all sectors of all systems. \nIn order to retrieve the sectors of a specific cluster use the GET /clusters/{clusterId}/sectors call.\n",
-        "operationId": "sectors.get",
         "produces": [
           "application/json"
         ],
@@ -1292,7 +1301,6 @@
         ],
         "summary": "One sector of a specific cluster of a specific system",
         "description": "Get one Sector",
-        "operationId": "sector.get",
         "produces": [
           "application/json"
         ],
