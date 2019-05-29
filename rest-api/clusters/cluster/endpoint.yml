@@ -1,61 +1,61 @@
-#/clusters/{clusterId}: 
-get: 
-  tags: 
+#/clusters/{clusterId}:
+get:
+  tags:
     - clusters
   summary: Get one Cluster
   description: Get one Cluster
 
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: path
       name: clusterId
       description: The unique ID of the cluster to retrieve
       type: string
       required: true
-      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
-  responses: 
-    "200": 
+      'x-example': '2a1152ee-4d77-4ff4-a811-598555937625'
+  responses:
+    '200':
       description: OK
-      schema: 
+      schema:
         $ref: ./get-cluster-response-schema.yml
       examples:
         application/json:
           $ref: ./get-cluster-response.yml
   deprecated: false
 
-put: 
-  tags: 
+put:
+  tags:
     - clusters
   summary: Update a Cluster
   description: Update a Cluster
 
   operationId: cluster.put
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: path
       name: clusterId
       description: The unique ID of the cluster to update
       type: string
       required: true
-      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+      'x-example': '2a1152ee-4d77-4ff4-a811-598555937625'
     - in: body
       name: cluster
       description: The cluster object to update
       required: true
       schema:
         $ref: ./put-cluster-request-schema.yml
-  responses: 
-    "200": 
+  responses:
+    '200':
       description: OK
-      schema: 
+      schema:
         $ref: ./put-cluster-response-schema.yml
       examples:
         application/json:
           $ref: ./put-cluster-response.yml
-    "400": 
+    '400':
       description: Missing or invalid parameters
-      schema: 
+      schema:
         $ref: ../../400-response-schema.yml
   deprecated: false

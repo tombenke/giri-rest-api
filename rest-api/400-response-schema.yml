@@ -4,10 +4,9 @@ description: The content of the error response in case of wrong or missing param
 example:
   $ref: ./400-response.yml
 type: object
-properties: 
-  error: 
+properties:
+  error:
     type: string
     description: The details about the error
-required: 
+required:
   - error
-

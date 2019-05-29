@@ -1,62 +1,54 @@
 name: ClusterSectors
-description:  |
-    The list of sectors belong to a specific cluster
+description: |
+  The list of sectors belong to a specific cluster
 style: COLLECTION
 uriTemplate: /clusters/{clusterId}/sectors
 methods:
-    GET:
-        summary: List all the ClusterSectors
-        notes: List all the ClusterSectors
-        # implementation: api.getClusterSectors
+  GET:
+    summary: List all the ClusterSectors
+    notes: List all the ClusterSectors
+    # implementation: api.getClusterSectors
+    request:
+      parameters:
+        - name: clusterId
+          kind: URL
+          required: true
+          type: string
+          summary: The id of the Cluster to be deleted
+          default: '1'
+      cookies: []
+      headers:
+        - field: Accept
+          content: 'application/json;q=0.9,*/*;q=0.8'
+    responses:
+      - name: OK
+        statusCode: &OkStatusCode 200
+        reason: &OkReason Successful execution
+        # validationSchema: getCollection-responseBody-validationSchema.json
+        cookies: []
+        headers:
+          - field: Content-Type
+            content: application/json
+        mockBody: getCollection-responseBody.json
+    testCases:
+      - name: Get ClusterSectors
+        description: Successfully retrieves all the ClusterSectors
+        url: /clusters/79e914da-5103-4651-abb1-70214d2270a7/sectors
+        template: testGetMethod.mustache
         request:
-            parameters: 
-                -
-                    name: clusterId
-                    kind: URL
-                    required: true
-                    type: string
-                    summary: The id of the Cluster to be deleted
-                    default: "1"
-            cookies: []
-            headers:
-                -
-                    field: Accept
-                    content: "application/json;q=0.9,*/*;q=0.8"
-        responses:
-            -
-                name: OK
-                statusCode: &OkStatusCode 200
-                reason: &OkReason Successful execution
-                # validationSchema: getCollection-responseBody-validationSchema.json
-                cookies: []
-                headers:
-                    -
-                        field: Content-Type
-                        content: application/json
-                mockBody: getCollection-responseBody.json
-        testCases:
-            -
-                name: Get ClusterSectors
-                description: Successfully retrieves all the ClusterSectors
-                url: /clusters/79e914da-5103-4651-abb1-70214d2270a7/sectors
-                template: testGetMethod.mustache
-                request:
-                    cookies: []
-                    headers:
-                        -
-                            field : "Accept"
-                            content: "application/json;q=0.9,*/*;q=0.8"
-                response:
-                    name: OK
-                    statusCode: *OkStatusCode
-                    reason: *OkReason
-                    cookies: []
-                    headers:
-                        -
-                            field: "Content-Type"
-                            content: "application/json"
-                    # validationSchema: getCollection-responseBody-validationSchema.json
-
+          cookies: []
+          headers:
+            - field: 'Accept'
+              content: 'application/json;q=0.9,*/*;q=0.8'
+        response:
+          name: OK
+          statusCode: *OkStatusCode
+          reason: *OkReason
+          cookies: []
+          headers:
+            - field: 'Content-Type'
+              content: 'application/json'
+          # validationSchema: getCollection-responseBody-validationSchema.json
 #    POST:
 #        summary: Create a new instance of ClusterSectors
 #        notes: Create a new instance ClusterSectors

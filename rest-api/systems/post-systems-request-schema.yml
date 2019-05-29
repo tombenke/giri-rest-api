@@ -4,10 +4,9 @@ example:
   $ref: ./post-systems-request.yml
 description: The description of the system to be created
 type: object
-properties: 
-  name: 
+properties:
+  name:
     type: string
     description: The display name of the system
-required: 
+required:
   - name
-

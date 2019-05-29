@@ -2,14 +2,13 @@
 title: The system body
 description: The descriptor of the selected system
 type: object
-properties: 
-  id: 
+properties:
+  id:
     type: string
     description: The unique ID of the system
-  name: 
+  name:
     type: string
     description: The display name of the system
-required: 
+required:
   - id
   - name
-

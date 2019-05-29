@@ -1,13 +1,13 @@
-swagger: "2.0"
+swagger: '2.0'
 
-info: 
+info:
   title: giri-rest-api
   description: This is the specification of the giri garden irrigator REST API endpoints.
-  version: "1.0"
-  contact: 
+  version: '1.0'
+  contact:
     name: giri-rest-api
-    url: "http://localhost"
-    email: "tombenke@gmail.com"
+    url: 'http://localhost'
+    email: 'tombenke@gmail.com'
 
 schemes:
   - http
@@ -20,8 +20,7 @@ produces:
 host: localhost
 basePath: /
 
-tags: 
-       
+tags:
   - name: systems
     description: Manage the garden irrigatior systems
 
@@ -37,14 +36,14 @@ tags:
   - name: swagger
     description: Static JSON format swagger file. Contains the specification of all endpoints provided by the giri system.
 
-securityDefinitions: 
-  ClientToken: 
+securityDefinitions:
+  ClientToken:
     description: The frontend uses ApiKey to access to these endpoints
     type: apiKey
     name: token
     in: query
 
-security: 
+security:
   - ClientToken: []
 
 paths:
@@ -70,6 +69,6 @@ paths:
   /sectors/{sectorId}:
     $ref: sectors/sector/endpoint.yml
 
-# Static content service for swagger.json
+  # Static content service for swagger.json
   /api-docs/:
     $ref: api-docs/endpoint.yml

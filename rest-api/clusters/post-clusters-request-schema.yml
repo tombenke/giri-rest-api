@@ -4,14 +4,13 @@ description: The details of the cluster to be created
 example:
   $ref: ./post-clusters-request.yml
 type: object
-properties: 
-  systemId: 
+properties:
+  systemId:
     type: string
     description: The unique ID of the system the newly created cluster will be added
-  name: 
+  name:
     type: string
     description: The display name of the new cluster
-required: 
+required:
   - systemId
   - name
-

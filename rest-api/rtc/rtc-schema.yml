@@ -2,10 +2,9 @@
 title: rtc body
 description: The time set
 type: object
-properties: 
-  time: 
+properties:
+  time:
     type: number
     description: The actual time-stamp value
-required: 
+required:
   - time
-

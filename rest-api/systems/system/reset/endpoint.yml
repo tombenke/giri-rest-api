@@ -1,31 +1,30 @@
-#/systems/{systemId}/reset: 
-post: 
-  tags: 
+#/systems/{systemId}/reset:
+post:
+  tags:
     - systems
   summary: The System Reset operation
   description: Execute the System Reset operation
 
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: path
       name: systemId
       description: The unique ID of the system to reset
       type: string
       required: true
-      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+      'x-example': '2a1152ee-4d77-4ff4-a811-598555937625'
     - in: body
       name: system
       description: The system parameters
       required: true
       schema:
         $ref: ./post-systemReset-request-schema.yml
-  responses: 
-    "200": 
+  responses:
+    '200':
       description: OK
-      schema: 
+      schema:
         $ref: ./post-systemReset-response-schema.yml
       examples:
-        application/json:
-          {}
+        application/json: {}
   deprecated: false

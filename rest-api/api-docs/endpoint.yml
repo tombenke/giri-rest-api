@@ -1,16 +1,16 @@
-#/api-docs: 
-get: 
-  tags: 
-    - "swagger"
+#/api-docs:
+get:
+  tags:
+    - 'swagger'
   summary: Responses the files from the directory defined by the contentPath property
   x-static:
     contentPath: ./docs/
     config:
       dotfiles: allow
       index: true
-  produces: 
+  produces:
     - application/json
-  responses: 
-    "200": 
+  responses:
+    '200':
       description: OK
   deprecated: false

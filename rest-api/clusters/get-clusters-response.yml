@@ -1,7 +1,6 @@
-- id: "79e914da-5103-4651-abb1-70214d2270a7"
-  systemId: "2a1152ee-4d77-4ff4-a811-598555937625"
-  name: "open-air"
-- id: "d64d2325-c7b0-4bc7-9178-8ec76ac7355c"
-  systemId: "2a1152ee-4d77-4ff4-a811-598555937625"
+- id: '79e914da-5103-4651-abb1-70214d2270a7'
+  systemId: '2a1152ee-4d77-4ff4-a811-598555937625'
+  name: 'open-air'
+- id: 'd64d2325-c7b0-4bc7-9178-8ec76ac7355c'
+  systemId: '2a1152ee-4d77-4ff4-a811-598555937625'
   name: politunnel
-

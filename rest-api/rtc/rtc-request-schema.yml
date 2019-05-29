@@ -4,10 +4,9 @@ description: The actual time to set
 example:
   time: 1474983731
 type: object
-properties: 
-  time: 
+properties:
+  time:
     type: number
     description: The time-stamp value to set
-required: 
+required:
   - time
-

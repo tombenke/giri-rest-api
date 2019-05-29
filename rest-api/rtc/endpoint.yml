@@ -21,7 +21,7 @@ put:
   tags:
     - rtc
   summary: Set the actual time
-  description:  Set the actual time in the system RTC
+  description: Set the actual time in the system RTC
 
   produces:
     - application/json
@@ -33,14 +33,14 @@ put:
       schema:
         $ref: rtc-request-schema.yml
   responses:
-    "200":
+    '200':
       description: OK
       schema:
         $ref: rtc-schema.yml
       examples:
         application/json:
           $ref: put-response.yml
-    "400":
+    '400':
       description: Missing or invalid parameters
       schema:
         $ref: ../400-response-schema.yml

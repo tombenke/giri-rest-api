@@ -1,24 +1,24 @@
 #/clusters/{clusterId}/sectors:
-get: 
-  tags: 
-    - "clusters"
+get:
+  tags:
+    - 'clusters'
   summary: The list of sectors belong to a specific cluster
   description: List all the sectors of the cluster
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: path
       name: clusterId
       description: The unique ID of the cluster to query about its sectors
       type: string
       required: true
-      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
-  responses: 
-    "200": 
+      'x-example': '2a1152ee-4d77-4ff4-a811-598555937625'
+  responses:
+    '200':
       description: OK
-      schema: 
-        $ref: "./get-sectors-response-schema.yml"
+      schema:
+        $ref: './get-sectors-response-schema.yml'
       examples:
         application/json:
-          $ref: "./get-sectors-response.yml"
+          $ref: './get-sectors-response.yml'
   deprecated: false

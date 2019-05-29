@@ -1,53 +1,53 @@
 title: Sector descriptor object
 description: Describe one sector in details
 type: object
-properties: 
-  id: 
+properties:
+  id:
     type: string
     description: The unique ID of the sector
-  clusterId: 
+  clusterId:
     type: string
     description: The unique ID of the sector belongs to
-  name: 
+  name:
     type: string
     description: The display name of the sector
-  idx: 
+  idx:
     type: number
     description: The index of sector in the cluster
-  config: 
+  config:
     type: object
     description: The sector configuration parameters
-    properties: 
-      mode: 
+    properties:
+      mode:
         type: string
         description: The working mode of the sector. One of `INACTIVE`, `MANUAL`, `AUTO`
-      startAt: 
+      startAt:
         type: string
         description: cron pattern string of start the active period, if `mode` is `AUTO`
       duration:
         type: number
         description: The length of period in minutes, if `mode` is `AUTO`
-    required: 
+    required:
       - mode
       - startAt
       - duration
-  state: 
+  state:
     type: string
     description: The actual state of the sector
-  port: 
+  port:
     type: object
     description: The port configuration parameters, the sector is using
-    properties: 
-      deviceId: 
+    properties:
+      deviceId:
         type: string
         description: The physical device id of the port device used by the sector to switch the solenoid
-      portIdx: 
+      portIdx:
         type: number
         description: The index of the port on the physical device
-    required: 
+    required:
       - deviceId
       - portIdx
-required: 
+required:
   - id
   - clusterId
   - name

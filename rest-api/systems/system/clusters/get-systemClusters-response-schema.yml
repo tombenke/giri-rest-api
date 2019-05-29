@@ -2,21 +2,20 @@
 title: The GET /systems/clusters response body
 description: The list of clusters of the system
 type: array
-items: 
+items:
   type: object
   description: A cluster
-  properties: 
-    clusterId: 
+  properties:
+    clusterId:
       type: string
       description: The unique ID of the cluster
-    systemId: 
+    systemId:
       type: string
       description: The unique Id of the system the cluster belongs to
-    name: 
+    name:
       type: string
       description: The display name of the cluster
-  required: 
+  required:
     - clusterId
     - systemId
     - name
-

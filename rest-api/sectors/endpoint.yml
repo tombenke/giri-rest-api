@@ -1,49 +1,49 @@
-#/sectors: 
-get: 
-  tags: 
+#/sectors:
+get:
+  tags:
     - sectors
   summary: Get the list of all sectors of all systems
   description: |
-      Returns with the list of all sectors of all systems. 
-      In order to retrieve the sectors of a specific cluster use the GET /clusters/{clusterId}/sectors call.
+    Returns with the list of all sectors of all systems. 
+    In order to retrieve the sectors of a specific cluster use the GET /clusters/{clusterId}/sectors call.
 
-  produces: 
+  produces:
     - application/json
-  responses: 
-    200: 
+  responses:
+    200:
       description: OK
-      schema: 
+      schema:
         $ref: get-sectors-response-schema.yml
       examples:
         application/json:
           $ref: get-sectors-response.yml
   deprecated: false
 
-post: 
-  tags: 
+post:
+  tags:
     - sectors
   summary: Create a new instance of Sectors
   description: Create a new instance of Sectors
 
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: body
       name: sectors
       description: The sector object to create
       required: true
       schema:
         $ref: sector/sector-request-schema.yml
-  responses: 
-    200: 
+  responses:
+    200:
       description: OK
-      schema: 
+      schema:
         $ref: sector/sector-schema.yml
       examples:
         application/json:
           $ref: post-sectors-response.yml
-    400: 
+    400:
       description: Missing or invalid parameters
-      schema: 
+      schema:
         $ref: ../400-response-schema.yml
   deprecated: false

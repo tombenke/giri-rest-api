@@ -1,73 +1,72 @@
-- id: "9688588a-2507-4460-855c-72743ff7fe5f"
+- id: '9688588a-2507-4460-855c-72743ff7fe5f'
   name: tomatoes
-  clusterId: "79e914da-5103-4651-abb1-70214d2270a7"
+  clusterId: '79e914da-5103-4651-abb1-70214d2270a7'
   idx: 0
-  config: 
+  config:
     mode: AUTO
-    startAt: "0 5 * * *"
+    startAt: '0 5 * * *'
     duration: 60
   state: OFF
-  port: 
-    deviceId: "53181aca-1dad-4cc0-86b6-eaf59dd01989"
+  port:
+    deviceId: '53181aca-1dad-4cc0-86b6-eaf59dd01989'
     portIdx: 0
-- id: "aa0eb245-eb9e-4815-88f5-891bc89ca0d8"
+- id: 'aa0eb245-eb9e-4815-88f5-891bc89ca0d8'
   name: cucumbers
-  clusterId: "79e914da-5103-4651-abb1-70214d2270a7"
+  clusterId: '79e914da-5103-4651-abb1-70214d2270a7'
   idx: 1
-  config: 
+  config:
     mode: AUTO
-    startAt: "0 6 * * *"
+    startAt: '0 6 * * *'
     duration: 60
   state: OFF
-  port: 
-    deviceId: "53181aca-1dad-4cc0-86b6-eaf59dd01989"
+  port:
+    deviceId: '53181aca-1dad-4cc0-86b6-eaf59dd01989'
     portIdx: 1
-- id: "74d9ac33-c3f2-4ba7-8d7e-89ede93ed191"
+- id: '74d9ac33-c3f2-4ba7-8d7e-89ede93ed191'
   name: papricas
-  clusterId: "79e914da-5103-4651-abb1-70214d2270a7"
-  config: 
+  clusterId: '79e914da-5103-4651-abb1-70214d2270a7'
+  config:
     mode: AUTO
-    startAt: "0 7 * * *"
+    startAt: '0 7 * * *'
     duration: 60
   state: OFF
   idx: 2
-  port: 
-    deviceId: "53181aca-1dad-4cc0-86b6-eaf59dd01989"
+  port:
+    deviceId: '53181aca-1dad-4cc0-86b6-eaf59dd01989'
     portIdx: 2
-- id: "576ac398-f675-4851-b246-4bf6067471dd"
+- id: '576ac398-f675-4851-b246-4bf6067471dd'
   name: carrots
-  clusterId: "79e914da-5103-4651-abb1-70214d2270a7"
+  clusterId: '79e914da-5103-4651-abb1-70214d2270a7'
   idx: 3
-  config: 
+  config:
     mode: AUTO
-    startAt: "0 8 * * *"
+    startAt: '0 8 * * *'
     duration: 30
   state: OFF
-  port: 
-    deviceId: "53181aca-1dad-4cc0-86b6-eaf59dd01989"
+  port:
+    deviceId: '53181aca-1dad-4cc0-86b6-eaf59dd01989'
     portIdx: 3
-- id: "f63df5ca-f6b1-4c02-8f6a-f2170b8ed0a9"
+- id: 'f63df5ca-f6b1-4c02-8f6a-f2170b8ed0a9'
   name: cucumbers
-  clusterId: "d64d2325-c7b0-4bc7-9178-8ec76ac7355c"
+  clusterId: 'd64d2325-c7b0-4bc7-9178-8ec76ac7355c'
   idx: 0
-  config: 
+  config:
     mode: AUTO
-    startAt: "0 8 * * *"
+    startAt: '0 8 * * *'
     duration: 30
   state: OFF
-  port: 
-    deviceId: "b02e7625-aca4-4d7c-bdf7-73cd92ebf055"
+  port:
+    deviceId: 'b02e7625-aca4-4d7c-bdf7-73cd92ebf055'
     portIdx: 0
-- id: "1d255036-419a-4955-8c44-889a0dbe368e"
+- id: '1d255036-419a-4955-8c44-889a0dbe368e'
   name: potatoes
-  clusterId: "d64d2325-c7b0-4bc7-9178-8ec76ac7355c"
+  clusterId: 'd64d2325-c7b0-4bc7-9178-8ec76ac7355c'
   idx: 1
-  config: 
+  config:
     mode: AUTO
-    startAt: "0 8 * * *"
+    startAt: '0 8 * * *'
     duration: 30
   state: OFF
-  port: 
-    deviceId: "b02e7625-aca4-4d7c-bdf7-73cd92ebf055"
+  port:
+    deviceId: 'b02e7625-aca4-4d7c-bdf7-73cd92ebf055'
     portIdx: 1
-

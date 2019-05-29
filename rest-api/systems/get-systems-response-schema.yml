@@ -2,17 +2,16 @@
 title: The GET /systems response body
 description: The list of systems
 type: array
-items: 
+items:
   type: object
   description: A system descriptor
-  properties: 
-    id: 
+  properties:
+    id:
       type: string
       description: The unique ID of the system
-    name: 
+    name:
       type: string
       description: The display name of the system
-  required: 
+  required:
     - id
     - name
-
