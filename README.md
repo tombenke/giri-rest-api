@@ -18,7 +18,9 @@ The `rest-api` folder contains:
 
 The API descriptors can be either JSON or YAMl format files, or a mixture of them.
 
-See the [humar-friendly format API docs](https://tombenke.github.io/giri-rest-api/) in two different formats.
+See the human-friendly format API documentation in the `/docs` folder:
+- [giri-rest-api specification in swagger-ui format](https://tombenke.github.io/giri-rest-api/swagger.html),
+- [giri-rest-api specification in redoc format](https://tombenke.github.io/giri-rest-api/redoc-static.html).
 
 ### Service endpoints
 
