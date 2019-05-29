@@ -1411,7 +1411,7 @@
         ],
         "summary": "Responses the files from the directory defined by the contentPath property",
         "x-static": {
-          "contentPath": "./",
+          "contentPath": "./docs/",
           "config": {
             "dotfiles": "allow",
             "index": true

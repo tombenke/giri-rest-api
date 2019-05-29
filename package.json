@@ -43,7 +43,7 @@
     "clean": "rm dist/* -fr",
     "prepublishOnly": "npm run swagger && npm run prettier",
     "prettier": "prettier --single-quote --write 'rest-api/**/*.{js,jsx,ts,tsx,json,css,scss,md,yml}'",
-    "swagger": "swagger-cli validate rest-api/api.yml && swagger-cli bundle rest-api/api.yml -o rest-api/swagger.json",
+    "swagger": "swagger-cli validate rest-api/api.yml && swagger-cli bundle rest-api/api.yml -o docs/swagger.json && redoc-cli bundle rest-api/api.yml -o docs/redoc-static.html",
     "all": "npm run swagger && npm run prettier"
   }
 }
