@@ -13,15 +13,15 @@ get:
       description: The unique ID of the sector to retrieve
       type: string
       required: true
-      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+      x-example: "2a1152ee-4d77-4ff4-a811-598555937625"
   responses: 
-    "200": 
+    200: 
       description: OK
       schema: 
-        $ref: ./sector-schema.yml
+        $ref: sector-schema.yml
       examples:
         application/json:
-          $ref: ./sector.yml
+          $ref: get-sector-response.yml
   deprecated: false
 
 put:
@@ -30,7 +30,6 @@ put:
   summary: Update a Sector
   description: Update a Sector
 
-  operationId: sector.put
   produces: 
     - application/json
   parameters: 
@@ -39,22 +38,22 @@ put:
       description: The unique ID of the sector to update
       type: string
       required: true
-      "x-example": "2a1152ee-4d77-4ff4-a811-598555937625"
+      x-example: "2a1152ee-4d77-4ff4-a811-598555937625"
     - in: body
       name: sectors
       description: The sector object to update
       required: true
       schema:
-        $ref: ./sector-request-schema.yml
+        $ref: sector-request-schema.yml
   responses: 
-    "200": 
+    200: 
       description: OK
       schema: 
-        $ref: ./sector-schema.yml
+        $ref: sector-schema.yml
       examples:
         application/json:
-          $ref: ./sector.yml
-    "400": 
+          $ref: put-sector-response.yml
+    400: 
       description: Missing or invalid parameters
       schema: 
         $ref: ../../400-response-schema.yml

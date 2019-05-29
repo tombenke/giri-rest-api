@@ -25,10 +25,12 @@
     "type": "git",
     "url": "http://github.com/tombenke/giri-rest-api.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "redoc-cli": "^0.8.4"
+  },
   "devDependencies": {
-    "husky": "^2.1.0",
-    "prettier": "^1.17.0",
+    "husky": "^2.3.0",
+    "prettier": "^1.17.1",
     "swagger-cli": "^2.2.1"
   },
   "husky": {
@@ -40,7 +42,7 @@
     "test": "echo No tests defined!",
     "clean": "rm dist/* -fr",
     "prepublishOnly": "npm run swagger && npm run prettier",
-    "prettier": "prettier --single-quote --write 'rest-api/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "prettier": "prettier --single-quote --write 'rest-api/**/*.{js,jsx,ts,tsx,json,css,scss,md,yml}'",
     "swagger": "swagger-cli validate rest-api/api.yml && swagger-cli bundle rest-api/api.yml -o rest-api/swagger.json",
     "all": "npm run swagger && npm run prettier"
   }

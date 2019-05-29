@@ -75,7 +75,7 @@
             },
             "examples": {
               "application/json": {
-                "$ref": "#/paths/~1rtc/put/responses/200/examples/application~1json"
+                "time": 1474983731
               }
             }
           }
@@ -328,27 +328,12 @@
           "200": {
             "description": "OK",
             "schema": {
-              "title": "The system body",
-              "description": "The descriptor of the selected system",
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string",
-                  "description": "The unique ID of the system"
-                },
-                "name": {
-                  "type": "string",
-                  "description": "The display name of the system"
-                }
-              },
-              "required": [
-                "id",
-                "name"
-              ]
+              "$ref": "#/paths/~1systems~1%7BsystemId%7D/put/responses/200/schema"
             },
             "examples": {
               "application/json": {
-                "$ref": "#/paths/~1systems/post/responses/200/examples/application~1json"
+                "id": "2a1152ee-4d77-4ff4-a811-598555937625",
+                "name": "hedgehog-garden"
               }
             }
           }
@@ -408,11 +393,28 @@
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/paths/~1systems~1%7BsystemId%7D/get/responses/200/schema"
+              "title": "The system body",
+              "description": "The descriptor of the selected system",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "The unique ID of the system"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "The display name of the system"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
             },
             "examples": {
               "application/json": {
-                "$ref": "#/paths/~1systems/post/responses/200/examples/application~1json"
+                "id": "2a1152ee-4d77-4ff4-a811-598555937625",
+                "name": "hedgehog-garden"
               }
             }
           },
@@ -1082,7 +1084,6 @@
         ],
         "summary": "Create a new instance of Sectors",
         "description": "Create a new instance of Sectors",
-        "operationId": "sectors.post",
         "produces": [
           "application/json"
         ],
@@ -1322,7 +1323,19 @@
             },
             "examples": {
               "application/json": {
-                "$ref": "#/paths/~1sectors/post/responses/200/examples/application~1json"
+                "name": "tomatoes",
+                "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
+                "idx": 0,
+                "config": {
+                  "mode": "AUTO",
+                  "startAt": "0 5 * * *",
+                  "duration": 60
+                },
+                "state": "OFF",
+                "port": {
+                  "deviceId": "53181aca-1dad-4cc0-86b6-eaf59dd01989",
+                  "portIdx": 0
+                }
               }
             }
           }
@@ -1335,7 +1348,6 @@
         ],
         "summary": "Update a Sector",
         "description": "Update a Sector",
-        "operationId": "sector.put",
         "produces": [
           "application/json"
         ],
@@ -1366,7 +1378,19 @@
             },
             "examples": {
               "application/json": {
-                "$ref": "#/paths/~1sectors/post/responses/200/examples/application~1json"
+                "name": "tomatoes",
+                "clusterId": "79e914da-5103-4651-abb1-70214d2270a7",
+                "idx": 0,
+                "config": {
+                  "mode": "AUTO",
+                  "startAt": "0 5 * * *",
+                  "duration": 60
+                },
+                "state": "OFF",
+                "port": {
+                  "deviceId": "53181aca-1dad-4cc0-86b6-eaf59dd01989",
+                  "portIdx": 0
+                }
               }
             }
           },

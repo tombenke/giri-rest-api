@@ -1,46 +1,47 @@
-#/rtc: 
-get: 
-  tags: 
+#/rtc:
+get:
+  tags:
     - rtc
   summary: Get the actual time
   description: Get the actual time known by the RTC of the system
 
-  produces: 
+  produces:
     - application/json
-  responses: 
-    "200": 
+  responses:
+    200:
       description: OK
-      schema: 
-        $ref: ./rtc-schema.yml
+      schema:
+        $ref: rtc-schema.yml
       examples:
         application/json:
-          $ref: ./rtc.yml
+          $ref: get-response.yml
   deprecated: false
-put: 
-  tags: 
+
+put:
+  tags:
     - rtc
   summary: Set the actual time
   description:  Set the actual time in the system RTC
 
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: body
       name: rtc
       description: The put rtc parameters
       required: true
       schema:
-        $ref: ./rtc-request-schema.yml
-  responses: 
-    "200": 
+        $ref: rtc-request-schema.yml
+  responses:
+    "200":
       description: OK
-      schema: 
-        $ref: ./rtc-schema.yml
+      schema:
+        $ref: rtc-schema.yml
       examples:
         application/json:
-          $ref: ./rtc.yml
-    "400": 
+          $ref: put-response.yml
+    "400":
       description: Missing or invalid parameters
-      schema: 
+      schema:
         $ref: ../400-response-schema.yml
   deprecated: false

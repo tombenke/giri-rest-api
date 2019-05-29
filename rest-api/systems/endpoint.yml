@@ -1,56 +1,56 @@
-#/systems: 
-get: 
-  tags: 
+#/systems:
+get:
+  tags:
     - systems
   summary: List all the Systems
   description: List all the Systems
-  produces: 
+  produces:
     - application/json
-  responses: 
-    "200": 
+  responses:
+    200:
       description: OK
-      schema: 
-        $ref: ./get-systems-response-schema.yml
+      schema:
+        $ref: get-systems-response-schema.yml
       examples:
         application/json:
-          $ref: ./get-systems-response.yml
+          $ref: get-systems-response.yml
   deprecated: false
-post: 
-  tags: 
+post:
+  tags:
     - systems
   summary: Create a new instance of System
   description: Create a new instance of System
-  produces: 
+  produces:
     - application/json
-  parameters: 
+  parameters:
     - in: body
       name: systems
       description: The system object to create
       required: true
       schema:
-        $ref: ./post-systems-request-schema.yml
-  responses: 
-    "200": 
+        $ref: post-systems-request-schema.yml
+  responses:
+    200:
       description: OK
-      schema: 
-        $ref: ./post-systems-response-schema.yml
+      schema:
+        $ref: post-systems-response-schema.yml
       examples:
         application/json:
-          $ref: ./system/system.yml
-    "400": 
+          $ref: post-systems-response.yml
+    400:
       description: Missing or invalid parameters
-      schema: 
+      schema:
         $ref: ../400-response-schema.yml
   deprecated: false
-delete: 
-  tags: 
+delete:
+  tags:
     - systems
   summary: Deletes all the Systems
   description: Deletes all the Systems
-  produces: 
+  produces:
     - application/json
-  responses: 
-    "204": 
+  responses:
+    204:
       description: No Content
   deprecated: false
 

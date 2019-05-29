@@ -50,27 +50,26 @@ security:
 paths:
   # `giri-api` endpoints
   /rtc:
-    $ref: ./rtc/endpoint.yml
+    $ref: rtc/endpoint.yml
   /systems:
-    $ref: ./systems/endpoint.yml
+    $ref: systems/endpoint.yml
   /systems/{systemId}:
-    $ref: ./systems/system/endpoint.yml
+    $ref: systems/system/endpoint.yml
   /systems/{systemId}/clusters:
-    $ref: ./systems/system/clusters/endpoint.yml
+    $ref: systems/system/clusters/endpoint.yml
   /systems/{systemId}/reset:
-    $ref: ./systems/system/reset/endpoint.yml
+    $ref: systems/system/reset/endpoint.yml
   /clusters:
-    $ref: ./clusters/endpoint.yml
+    $ref: clusters/endpoint.yml
   /clusters/{clusterId}:
-    $ref: ./clusters/cluster/endpoint.yml
+    $ref: clusters/cluster/endpoint.yml
   /clusters/{clusterId}/sectors:
-    $ref: ./clusters/cluster/sectors/endpoint.yml
+    $ref: clusters/cluster/sectors/endpoint.yml
   /sectors:
-    $ref: ./sectors/endpoint.yml
+    $ref: sectors/endpoint.yml
   /sectors/{sectorId}:
-    $ref: ./sectors/sector/endpoint.yml
+    $ref: sectors/sector/endpoint.yml
 
 # Static content service for swagger.json
   /api-docs/:
-    $ref: ./api-docs/endpoint.yml
-
+    $ref: api-docs/endpoint.yml

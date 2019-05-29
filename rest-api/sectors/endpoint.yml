@@ -10,13 +10,13 @@ get:
   produces: 
     - application/json
   responses: 
-    "200": 
+    200: 
       description: OK
       schema: 
-        $ref: ./get-sectors-response-schema.yml
+        $ref: get-sectors-response-schema.yml
       examples:
         application/json:
-          $ref: ./get-sectors-response.yml
+          $ref: get-sectors-response.yml
   deprecated: false
 
 post: 
@@ -25,7 +25,6 @@ post:
   summary: Create a new instance of Sectors
   description: Create a new instance of Sectors
 
-  operationId: sectors.post
   produces: 
     - application/json
   parameters: 
@@ -34,16 +33,16 @@ post:
       description: The sector object to create
       required: true
       schema:
-        $ref: ./sector/sector-request-schema.yml
+        $ref: sector/sector-request-schema.yml
   responses: 
-    "200": 
+    200: 
       description: OK
       schema: 
-        $ref: ./sector/sector-schema.yml
+        $ref: sector/sector-schema.yml
       examples:
         application/json:
-          $ref: ./sector/sector.yml
-    "400": 
+          $ref: post-sectors-response.yml
+    400: 
       description: Missing or invalid parameters
       schema: 
         $ref: ../400-response-schema.yml
